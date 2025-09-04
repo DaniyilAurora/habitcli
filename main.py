@@ -17,7 +17,7 @@ while command != "-1" and command != "exit":
     
     # Add a habit
     if command[0] == "add" and len(command) > 1:
-        print(messages.add_habit)
+        db.add_habit(command[1], int(command[2]), command[3])
     elif command[0] == "help":
         print("Help: \n - add '<habit>' <time> <how often>, Example: add 'Do Sport' 12:00 1d")
     else:
